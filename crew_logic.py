@@ -55,7 +55,7 @@ def run_crew(name, desc, reviews, tone="Professional"):
     """app.py isko aise call karta hai: run_crew(name, desc, reviews, tone)
     Return: dict (sentiment, pros, cons, seo_title, seo_description, keywords, posts)
     """
-    llm = LLM(model="gemini/gemini-3.8-flash", api_key=os.getenv("GEMINI_API_KEY"))
+    llm = LLM(model="gemini/gemini-3.7-flash", api_key=os.getenv("GEMINI_API_KEY"))
 
     # Reviews ko temp file mein save karte hain taake Review Analyzer tool use ho sake
     tmp = tempfile.NamedTemporaryFile("w", suffix=".csv", delete=False, encoding="utf-8")
